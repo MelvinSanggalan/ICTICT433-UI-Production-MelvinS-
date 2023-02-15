@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextOnlyButton : MonoBehaviour
+public class BackOnlyButton : MonoBehaviour
 {
     //Melvin Sanggalan 15/02/2023
 
     //referencing the ui
-    public GameObject uiScreenOpened;
+    public GameObject uiScreenClosed;
 
-    public void OpenScreenOnly()
+    public void CloseScreenOnly()
     {
         //opening new ui
-        uiScreenOpened.transform.gameObject.SetActive(true);
+        uiScreenClosed.transform.gameObject.SetActive(false);
     }
-
 }
