@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Script created by Melvin Sanggalan on 28/03/2023
+
 
 public class DeleteSaveFileScript : MonoBehaviour
 {
@@ -22,12 +24,16 @@ public class DeleteSaveFileScript : MonoBehaviour
 
     public void DeleteFile()
     {
+        deleteConfirmYes.onClick.RemoveListener(DeleteFile);
+        deleteConfirmNo.onClick.RemoveListener(CancelDelete);
         saveFile.SetActive(false);
         deleteConfirm.SetActive(false);
     }
 
     public void CancelDelete()
     {
+        deleteConfirmYes.onClick.RemoveListener(DeleteFile);
+        deleteConfirmNo.onClick.RemoveListener(CancelDelete);
         deleteConfirm.SetActive(false);
     }
 
